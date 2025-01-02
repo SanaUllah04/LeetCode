@@ -10,3 +10,4 @@ class Solution:
             counter+=1
             a = b
             b = c
+        return b
