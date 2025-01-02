@@ -10,10 +10,3 @@ class Solution:
             counter+=1
             a = b
             b = c
-
-        print("Output: ",x)
-        print("There are total ",counter," Ways to climb to top")
-        
-        x = 0
-        for x in range(n):
-            
