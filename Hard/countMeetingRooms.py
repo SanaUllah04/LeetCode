@@ -1,4 +1,4 @@
-meetings = [(9, 10), (10, 11), (11, 12), (12, 13)]
+meetings = [[0,30], [5,10], [15,20]]
 
 
 def schedule(meetings):
