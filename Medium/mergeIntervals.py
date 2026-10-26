@@ -1,24 +1,48 @@
-list = [[1,4],[4,5]]
+list =[[1,3],[2,6],[8,10],[15,18]]
 
 
 def merging(list):
     start = []
     end = []
+    final = []
 
-    print(type(list))
+ 
     for i in range(len(list)):
-        print("List Item = ",list[i], "AT I = ", i)
         start.append(list[i][0])
         end.append(list[i][1])
 
     print("START = ",start, "END = ",end)
 
-    for i in range(len(list)-1):
-        diff = abs(start[i+1] - end[i])
+    first = 0
+    last = 1
+    j = 0
+    merge = False
 
-        if (start[i+1] > end[i]) and (diff == 1):
-            print("Start I+1 = ", start[i+1])
-            print("niga")
+    for i in range(len(list)):
+        print("AT J = ", j)
 
+        if j == (len(list)-1):
+            j = i
+        else:
+            j = i +1
+
+        first = i
+        last = j
+
+        print("Iteration number = ", i)
+        
+        if (end[i] > start[j]) or (start[j] == end[i]):
+            final.append([start[first], end[last]])
+            merge = True
+
+        else:
+            if merge == True:
+                i +=1 
+                final.append([start[i], end[i]])
+                merge = False
+        
+
+
+    return final
 
 print(merging(list))
